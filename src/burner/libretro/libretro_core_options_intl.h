@@ -73,6 +73,78 @@ extern "C" {
 
 /* RETRO_LANGUAGE_TURKISH */
 
+struct retro_core_option_definition option_defs_tr[] = {
+   {
+      "fba2012cps1_cpu_speed_adjust",
+      "CPU Hızı (%)",
+      "Öykünmüş CPU'nun hız aşırtmasını sağlar. Yavaşlamayı azaltabilir, ancak hatalara neden olabilir.",
+      {
+         { "100", NULL },
+         { "110", NULL },
+         { "120", NULL },
+         { "130", NULL },
+         { "140", NULL },
+         { "150", NULL },
+         { "160", NULL },
+         { "170", NULL },
+         { "180", NULL },
+         { "190", NULL },
+         { "200", NULL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "fba2012cps1_frameskip",
+      "Kare Atlama",
+      "Yetersiz çalışan ses arabelleğini, çatırtı önlemek için kareleri atlar. Görsel pürüzsüzlük pahasına performansı iyileştirir. 'Otomatik', ön uç tarafından önerildiğinde kareleri atlar. 'El ile', 'Kara Atlama Eşiği (%)' ayarını kullanır.",
+      {
+         { "disabled", NULL },
+         { "auto",     "Otomatik" },
+         { "manual",   "El ile" },
+         { NULL, NULL },
+      },
+      "disabled"
+   },
+   {
+      "fba2012cps1_frameskip_threshold",
+      "Kare Atlama Eşiği (%)",
+      "'Kare Atlama', 'El ile' olarak ayarlandığında, altındaki karelerin atlanacağı ses arabelleği doluluk eşiğini (yüzde olarak) belirtir. Daha yüksek değerler, karelerin daha sık düşmesine neden olarak çatlama riskini azaltır.",
+      {
+         { "15", NULL },
+         { "18", NULL },
+         { "21", NULL },
+         { "24", NULL },
+         { "27", NULL },
+         { "30", NULL },
+         { "33", NULL },
+         { "36", NULL },
+         { "39", NULL },
+         { "42", NULL },
+         { "45", NULL },
+         { "48", NULL },
+         { "51", NULL },
+         { "54", NULL },
+         { "57", NULL },
+         { "60", NULL },
+         { NULL, NULL },
+      },
+      "33"
+   },
+   {
+      "fba2012cps1_diagnostics",
+      "Teşhis Girişi",
+      "Servis menüsünü açmak için AÇIK duruma getirin ve içeriği devam ettirin",
+      {
+         { "disabled", "devre dışı" },
+         { "enabled",  "etkin" },
+         { NULL, NULL },
+      },
+      "disabled"
+   },
+   { NULL, NULL, NULL, {{0}}, NULL },
+};
+
 /* RETRO_LANGUAGE_SLOVAK */
 
 /* RETRO_LANGUAGE_PERSIAN */
