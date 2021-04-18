@@ -41,6 +41,78 @@ extern "C" {
 
 /* RETRO_LANGUAGE_FRENCH */
 
+struct retro_core_option_definition option_defs_fr[] = {
+   {
+      "fba2012cps1_cpu_speed_adjust",
+      "Vitesse CPU (%)",
+      "Active l'overclocking du processeur émulé. Peut réduire le ralentissement, mais peut causer des problèmes.",
+      {
+         { "100", NULL },
+         { "110", NULL },
+         { "120", NULL },
+         { "130", NULL },
+         { "140", NULL },
+         { "150", NULL },
+         { "160", NULL },
+         { "170", NULL },
+         { "180", NULL },
+         { "190", NULL },
+         { "200", NULL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "fba2012cps1_frameskip",
+      "Frameskip",
+      "Sauter des images pour éviter que le tampon audio ne soit sous-exécuté (crépitements). Améliore les performances au détriment de la fluidité visuelle. 'Auto' saute des images lorsque le frontend le conseille. 'Manuel' utilise le paramètre 'Seuil de saut d'images (%)'.",
+      {
+         { "disabled", NULL },
+         { "auto",     "Auto" },
+         { "manual",   "Manual" },
+         { NULL, NULL },
+      },
+      "disabled"
+   },
+   {
+      "fba2012cps1_frameskip_threshold",
+      "Frameskip Threshold (%)",
+      "Lorsque 'Saut d'images' est réglé sur 'Manuel', spécifie le seuil d'occupation du tampon audio (pourcentage) en dessous duquel des images seront sautées. Des valeurs plus élevées réduisent le risque de crépitements en faisant sauter des images plus fréquemment.",
+      {
+         { "15", NULL },
+         { "18", NULL },
+         { "21", NULL },
+         { "24", NULL },
+         { "27", NULL },
+         { "30", NULL },
+         { "33", NULL },
+         { "36", NULL },
+         { "39", NULL },
+         { "42", NULL },
+         { "45", NULL },
+         { "48", NULL },
+         { "51", NULL },
+         { "54", NULL },
+         { "57", NULL },
+         { "60", NULL },
+         { NULL, NULL },
+      },
+      "33"
+   },
+   {
+      "fba2012cps1_diagnostics",
+      "Entrée de diagnostic",
+      "Activer puis reprendre le contenu pour ouvrir le menu de service",
+      {
+         { "disabled", NULL },
+         { "enabled",  NULL },
+         { NULL, NULL },
+      },
+      "disabled"
+   },
+   { NULL, NULL, NULL, {{0}}, NULL },
+};
+
 /* RETRO_LANGUAGE_SPANISH */
 
 /* RETRO_LANGUAGE_GERMAN */
