@@ -93,7 +93,7 @@ struct retro_core_option_definition option_defs_us[] = {
    },
    {
       "fba2012cps1_auto_rotate",
-      "Rotate Vertically Aligned Games (Restart)",
+      "Rotate Vertically Aligned Games (Restart required)",
       "Automatically rotate the display when running vertically aligned games. When disabled, D-Pad input will be rotated to match on-screen directions.",
       {
          { "enabled",  NULL },
@@ -203,7 +203,7 @@ struct retro_core_option_definition *option_defs_intl[RETRO_LANGUAGE_LAST] = {
    option_defs_us, /* RETRO_LANGUAGE_ENGLISH */
    NULL,           /* RETRO_LANGUAGE_JAPANESE */
    NULL,           /* RETRO_LANGUAGE_FRENCH */
-   NULL,           /* RETRO_LANGUAGE_SPANISH */
+   option_defs_es, /* RETRO_LANGUAGE_SPANISH */
    NULL,           /* RETRO_LANGUAGE_GERMAN */
    NULL,           /* RETRO_LANGUAGE_ITALIAN */
    NULL,           /* RETRO_LANGUAGE_DUTCH */
